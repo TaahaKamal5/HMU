@@ -19,16 +19,18 @@
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimaryLight"
         android:drawableLeft="@drawable/email_icon"
-        android:drawableTint="@color/colorPrimaryDark"
+        android:drawablePadding="5dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275" />
+        app:layout_constraintVertical_bias="0.275"
+        android:autofillHints=""
+        android:drawableStart="@drawable/email_icon" />
 
     <EditText
         android:id="@+id/etPass"
@@ -42,16 +44,18 @@
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimaryLight"
         android:drawableLeft="@drawable/pass_icon"
-        android:drawableTint="@color/colorPrimaryDark"
+        android:drawablePadding="5dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/pass"
         android:inputType="textPassword"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmail"
-        app:layout_constraintVertical_bias="0.032" />
+        app:layout_constraintVertical_bias="0.032"
+        android:autofillHints=""
+        android:drawableStart="@drawable/pass_icon" />
 
     <Button
         android:id="@+id/bLogin"
@@ -64,7 +68,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/button_properties"
-        android:text="Login"
+        android:text="@string/login"
         android:textSize="20sp"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,7 +80,7 @@
 
     <TextView
         android:id="@+id/tvRegister"
-        android:layout_width="287dp"
+        android:layout_width="310dp"
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -85,9 +89,9 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="Not registered yet? Register here\nForgot your password?"
+        android:text="@string/regText"
         android:textColor="#ffff"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
@@ -107,7 +111,7 @@
         android:layout_marginBottom="8dp"
         android:gravity="center"
         android:textColor="#ffff"
-        android:text="HMU"
+        android:text="@string/logo"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

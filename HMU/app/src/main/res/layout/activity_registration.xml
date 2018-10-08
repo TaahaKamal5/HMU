@@ -8,7 +8,7 @@
     tools:context=".Registration">
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/etrEmail"
         android:layout_width="314dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -19,19 +19,21 @@
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimaryLight"
         android:drawableLeft="@drawable/email_icon"
-        android:drawableTint="@color/colorPrimaryDark"
+        android:drawablePadding="5dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.058" />
+        app:layout_constraintVertical_bias="0.058"
+        android:autofillHints=""
+        android:drawableStart="@drawable/email_icon" />
 
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/etrName"
         android:layout_width="314dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -42,19 +44,21 @@
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimaryLight"
         android:drawableLeft="@drawable/name_icon"
-        android:drawableTint="@color/colorPrimaryDark"
+        android:drawablePadding="5dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint="@string/name"
         android:inputType="textPersonName"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail"
-        app:layout_constraintVertical_bias="0.04000002" />
+        app:layout_constraintTop_toBottomOf="@+id/etrEmail"
+        app:layout_constraintVertical_bias="0.04000002"
+        android:autofillHints=""
+        android:drawableStart="@drawable/name_icon" />
 
     <EditText
-        android:id="@+id/etPass"
+        android:id="@+id/etrPass"
         android:layout_width="314dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -65,19 +69,21 @@
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimaryLight"
         android:drawableLeft="@drawable/pass_icon"
-        android:drawableTint="@color/colorPrimaryDark"
+        android:drawablePadding="5dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/pass"
         android:inputType="textPassword"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etName"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintTop_toBottomOf="@+id/etrName"
+        app:layout_constraintVertical_bias="0.048"
+        android:autofillHints=""
+        android:drawableStart="@drawable/pass_icon" />
 
     <EditText
-        android:id="@+id/etPass2"
+        android:id="@+id/etrPass2"
         android:layout_width="314dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -88,17 +94,19 @@
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimaryLight"
         android:drawableLeft="@drawable/pass_icon"
-        android:drawableTint="@color/colorPrimaryDark"
+        android:drawablePadding="5dp"
         android:ems="10"
-        android:hint="Confirm Password"
+        android:hint="@string/pass2"
         android:inputType="textPassword"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPass"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintTop_toBottomOf="@+id/etrPass"
+        app:layout_constraintVertical_bias="0.045"
+        android:autofillHints=""
+        android:drawableStart="@drawable/pass_icon" />
 
     <Button
         android:id="@+id/bEnter"
@@ -111,14 +119,14 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/button_properties"
-        android:text="Enter"
+        android:text="@string/enter"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPass2"
-        app:layout_constraintVertical_bias="0.43" />
+        app:layout_constraintTop_toBottomOf="@+id/etrPass2"
+        app:layout_constraintVertical_bias="0.361" />
 
     <TextView
         android:id="@+id/tvUser"
@@ -131,7 +139,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="Already a user? Click here"
+        android:text="@string/userText"
         android:textColor="#ffff"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -151,7 +159,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="Account Set Up"
+        android:text="@string/setupText"
         android:textColor="#ffff"
         android:textSize="24sp"
         android:textStyle="bold"
