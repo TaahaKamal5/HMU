@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
+import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
@@ -40,12 +41,26 @@ public class Login extends AppCompatActivity {
             public void onClick(@NonNull View widget) {
                 toNewReg();
             }
+
+            @Override
+            public void updateDrawState(@NonNull TextPaint ds) {
+                super.updateDrawState(ds);
+                ds.setUnderlineText(false);
+                ds.setFakeBoldText(true);
+            }
         };
 
         ClickableSpan cs2 = new ClickableSpan() {
             @Override
             public void onClick(@NonNull View widget) {
                 toForgotPass();
+            }
+
+            @Override
+            public void updateDrawState(@NonNull TextPaint ds) {
+                super.updateDrawState(ds);
+                ds.setUnderlineText(false);
+                ds.setFakeBoldText(true);
             }
         };
 
