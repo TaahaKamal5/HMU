@@ -4,7 +4,7 @@
     <string name="email">Email</string>
     <string name="pass">Password</string>
     <string name="login">Login</string>
-    <string name="regText">Not registered yet? Register here Forgot your password?</string>
+    <string name="regText">Not registered yet? Register here\n Forgot your password?</string>
     <string name="logo">HMU</string>
 
     <!-- Registration Page texts -->
@@ -13,6 +13,8 @@
     <string name="enter">Enter</string>
     <string name="userText">Already a user? Click here</string>
     <string name="setupText">Account Set Up</string>
+
+    <!-- Email link Page texts -->
     <string name="instruction">Enter your UTD .edu email address. We will send you a link to get your account set up.</string>
 
 </resources>
