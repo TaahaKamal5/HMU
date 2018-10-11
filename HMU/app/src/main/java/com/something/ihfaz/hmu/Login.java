@@ -72,7 +72,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void toNewReg(){
-        Intent intentNR = new Intent(this, Email.class);
+        Intent intentNR = new Intent(this, Registration.class);
         startActivity(intentNR);
     }
 

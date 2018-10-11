@@ -57,7 +57,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:autofillHints=""
-        android:background="@color/colorPrimaryLight"
+        android:background="@drawable/et_properties"
         android:drawableStart="@drawable/email_icon"
         android:drawableLeft="@drawable/email_icon"
         android:drawablePadding="5dp"

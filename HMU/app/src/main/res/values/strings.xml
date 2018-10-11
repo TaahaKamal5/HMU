@@ -15,6 +15,6 @@
     <string name="setupText">Account Set Up</string>
 
     <!-- Email link Page texts -->
-    <string name="instruction">Enter your UTD .edu email address. We will send you a link to get your account set up.</string>
+    <string name="instruction">Enter your UTD .edu email address. We will send you a link to reset your passwords.</string>
 
 </resources>
