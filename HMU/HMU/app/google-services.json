@@ -1,0 +1,143 @@
+{
+  "project_info": {
+    "project_number": "336837522810",
+    "firebase_url": "https://hmupractice.firebaseio.com",
+    "project_id": "hmupractice",
+    "storage_bucket": "hmupractice.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336837522810:android:c0db69607cf01926",
+        "android_client_info": {
+          "package_name": "com.something.ihfaz.hmu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336837522810-csmonoepd0julq3s4c6v5v3c9v6avdp1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.something.ihfaz.hmu",
+            "certificate_hash": "f4bc1f1068412ac43fb7152e3caeb65fcfd6356b"
+          }
+        },
+        {
+          "client_id": "336837522810-lsaldduaq3dcv03bs0ruftnrpknp2ov1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKNpb9BgqbAwazfO9hrtx3Ni6L8D6Jh8k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336837522810-lsaldduaq3dcv03bs0ruftnrpknp2ov1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336837522810:android:c89807435af4e57b",
+        "android_client_info": {
+          "package_name": "utdallas.edu.testapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336837522810-m4suj21l9fc705n2r4cp7gpps29n8eip.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "utdallas.edu.testapp",
+            "certificate_hash": "f4bc1f1068412ac43fb7152e3caeb65fcfd6356b"
+          }
+        },
+        {
+          "client_id": "336837522810-lsaldduaq3dcv03bs0ruftnrpknp2ov1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKNpb9BgqbAwazfO9hrtx3Ni6L8D6Jh8k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336837522810-lsaldduaq3dcv03bs0ruftnrpknp2ov1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336837522810:android:fc2c1248ca954520",
+        "android_client_info": {
+          "package_name": "utdallas.edu.tryagain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336837522810-oqech9lvkfj3td363hevqlg1u4o71v1r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "utdallas.edu.tryagain",
+            "certificate_hash": "f4bc1f1068412ac43fb7152e3caeb65fcfd6356b"
+          }
+        },
+        {
+          "client_id": "336837522810-lsaldduaq3dcv03bs0ruftnrpknp2ov1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKNpb9BgqbAwazfO9hrtx3Ni6L8D6Jh8k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336837522810-lsaldduaq3dcv03bs0ruftnrpknp2ov1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
