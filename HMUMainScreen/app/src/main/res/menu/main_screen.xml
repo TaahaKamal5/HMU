@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_person"
+        android:icon="@drawable/person_icon"
+        android:title="Account"/>
+
+    <item
+        android:id="@+id/nav_explore"
+        android:icon="@drawable/compass_icon"
+        android:title="Explore"/>
+
+    <item
+        android:id="@+id/nav_trade"
+        android:icon="@drawable/add_icon"
+        android:title="New Trade"/>
+
+    <item
+        android:id="@+id/nav_chat"
+        android:icon="@drawable/chat_icon"
+        android:title="Chat"/>
+
+    <item
+        android:id="@+id/nav_history"
+        android:icon="@drawable/tag_icon"
+        android:title="History"/>
+</menu>
