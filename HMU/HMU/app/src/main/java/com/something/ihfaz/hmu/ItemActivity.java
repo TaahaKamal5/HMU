@@ -7,7 +7,7 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ItemActivity extends AppCompatActivity {
+public class ItemActivity extends AppCompatActivity {   // Activity that displays an item off the feed
     private TextView name, description, price, sellerName, condition, location, timePosted;
     private ImageView pictureID;
 
@@ -26,9 +26,7 @@ public class ItemActivity extends AppCompatActivity {
         pictureID = (ImageView) findViewById(R.id.pictureID);
 
         Intent intent = getIntent();
-        Item item = (Item) intent.getParcelableExtra("itemObj");
-
-        Log.v("TAGINSIDE","" + item.getCondition());
+        Item item = (Item) intent.getParcelableExtra("itemObj");    // get the item object from the call
 
         name.setText(item.getName());
         description.setText("Description: " + item.getDescription());

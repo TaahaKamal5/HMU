@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder> {
+public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder> {   // binds the item information to each cell
 
     private List<Item> itemsList;
     private Context mContext;

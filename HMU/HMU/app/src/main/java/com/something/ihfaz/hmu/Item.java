@@ -5,12 +5,13 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 
-public class Item implements Parcelable {
+public class Item implements Parcelable {   // Parcelable so can be passed through intents
     String name, description, sellerNETID, condition, location;
     boolean status;    // sell or buy
     double price;
     int picture;    // ID
     ArrayList<String> keywords;
+    // IF ADDING MORE MEMBERS NEED TO UPDATE PARCELABLE METHODS
 
     public Item(String name, String description, int picture, String sellerNETID, String condition, String location, boolean status, double price) {
         this.name = name;
@@ -21,6 +22,10 @@ public class Item implements Parcelable {
         this.location = location;
         this.status = status;
         this.price = price;
+    }
+
+    public String toString() {
+        return name + "\t" + condition;
     }
 
     public String getName() {
@@ -90,6 +95,8 @@ public class Item implements Parcelable {
         status = in.readByte() != 0x00;
         price = in.readDouble();
         picture = in.readInt();
+        condition = in.readString();
+        location = in.readString();
         if (in.readByte() == 0x01) {
             keywords = new ArrayList<String>();
             in.readList(keywords, String.class.getClassLoader());
@@ -111,6 +118,8 @@ public class Item implements Parcelable {
         dest.writeByte((byte) (status ? 0x01 : 0x00));
         dest.writeDouble(price);
         dest.writeInt(picture);
+        dest.writeString(condition);
+        dest.writeString(location);
         if (keywords == null) {
             dest.writeByte((byte) (0x00));
         } else {
