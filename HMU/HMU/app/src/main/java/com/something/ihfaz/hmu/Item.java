@@ -2,18 +2,24 @@ package com.something.ihfaz.hmu;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
-public class Item implements Parcelable {   // Parcelable so can be passed through intents
-    String name, description, sellerNETID, condition, location;
+public class Item implements Parcelable, Comparable {   // Parcelable so can be passed through intents
+    String name, description, sellerNETID, condition, location, lastMessage;
     boolean status;    // sell or buy
     double price;
     int picture;    // ID
     ArrayList<String> keywords;
+    Timestamp timePosted;
     // IF ADDING MORE MEMBERS NEED TO UPDATE PARCELABLE METHODS
+    // ADDED LAST MESSAGE add to parceable
 
-    public Item(String name, String description, int picture, String sellerNETID, String condition, String location, boolean status, double price) {
+    public Item(String name, String description, int picture, String sellerNETID, String condition, String location, boolean status, double price, Timestamp timePosted) {
         this.name = name;
         this.description = description;
         this.picture = picture;
@@ -22,6 +28,14 @@ public class Item implements Parcelable {   // Parcelable so can be passed throu
         this.location = location;
         this.status = status;
         this.price = price;
+        this.timePosted = timePosted;
+        this.lastMessage = "";   // empty by default
+    }
+
+    @Override
+    public int compareTo(Object obj) {
+        Item other = (Item)obj;
+        return name.compareTo(other.getName());
     }
 
     public String toString() {
@@ -88,6 +102,16 @@ public class Item implements Parcelable {   // Parcelable so can be passed throu
 
     public void setKeywords(ArrayList<String> keywords) { this.keywords = keywords; }
 
+    public Timestamp getTimePosted() { return timePosted; }
+
+    public String printTimePosted() {
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd HH:mm");
+        Date resultdate = new Date(timePosted.getTime());
+        return sdf.format(resultdate);
+    }
+
+    public void setTimePosted(Timestamp timePosted) { this.timePosted = timePosted; }
+
     protected Item(Parcel in) {
         name = in.readString();
         description = in.readString();
@@ -103,6 +127,8 @@ public class Item implements Parcelable {   // Parcelable so can be passed throu
         } else {
             keywords = null;
         }
+        timePosted = new Timestamp(in.readLong());
+        lastMessage = in.readString();
     }
 
     @Override
@@ -126,6 +152,8 @@ public class Item implements Parcelable {   // Parcelable so can be passed throu
             dest.writeByte((byte) (0x01));
             dest.writeList(keywords);
         }
+        dest.writeLong(timePosted.getTime());
+        dest.writeString(lastMessage);
     }
 
     @SuppressWarnings("unused")
@@ -140,4 +168,5 @@ public class Item implements Parcelable {   // Parcelable so can be passed throu
             return new Item[size];
         }
     };
+
 }

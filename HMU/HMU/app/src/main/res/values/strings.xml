@@ -17,4 +17,7 @@
     <!-- Email link Page texts -->
     <string name="instruction">Enter your UTD .edu email address. We will send you a link to reset your passwords.</string>
 
+    <!-- Seller Info Popup texts -->
+    <string name="close">X</string>
+
 </resources>

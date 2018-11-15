@@ -39,7 +39,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder> 
             @Override
             public void onClick(View v) {
                 // Toast.makeText(v.getContext(), "Clicked!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(mContext, ItemActivity.class);
+                // CHECK TO SEE IF THE PERSON MADE THE ITEM IF SO OPEN ADMIN CLASS IF NOT OPEN REGULAR CLASS !!!!
+                Intent intent = new Intent(mContext, AdminItemActivity.class);
                 intent.putExtra("itemObj", obj);
                 mContext.startActivity(intent);
             }
