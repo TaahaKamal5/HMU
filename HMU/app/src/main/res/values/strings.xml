@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">HMU</string>
+    <!-- Login Page texts -->
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="login">Login</string>
+    <string name="regText">Not registered yet? Register here\n Forgot your password?</string>
+    <string name="logo">HMU</string>
+
+    <!-- Registration Page texts -->
+    <string name="name">Name</string>
+    <string name="pass2">Confirm Password</string>
+    <string name="enter">Enter</string>
+    <string name="userText">Already a user? Click here</string>
+    <string name="setupText">Account Set Up</string>
+
+    <!-- Email link Page texts -->
+    <string name="instruction">Enter your UTD .edu email address. We will send you a link to reset your passwords.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

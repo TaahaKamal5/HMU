@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="13"
+    tools:context=".Chat">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/chatHeading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="itemName"
+            android:textStyle="bold"
+            android:textColor="#ffff"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:paddingBottom="7dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.8"
+        android:elevation="15dp">
+
+        <TextView
+            android:id="@+id/chatHeading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="25dp"
+            android:paddingTop="10dp"
+            android:text="CS 1200 Textbook"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/chatSellerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="25dp"
+            android:paddingTop="7dp"
+            android:text="Seller: Name"
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <ImageView
+            android:id="@+id/itemPic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingRight="15dp"
+            android:layout_marginVertical="8dp"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/cs_book_test" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7.85"
+        android:padding="8dp"
+        android:background="@color/colorPrimary">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chatRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="8dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.25"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/bMessage"
+            android:layout_width="290dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:background="@drawable/button_properties"
+            android:text="Send Message"
+            android:textSize="15dp"
+            android:elevation="10dp"
+            />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryDark"
+        app:menu="@menu/nav_bar"/>
+
+</LinearLayout>
