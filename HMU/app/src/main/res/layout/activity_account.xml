@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="100"
+            android:background="@color/colorPrimary"
+            tools:context=".Account">
+
+            <RelativeLayout
+                android:layout_weight="10"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/colorPrimaryDark" >
+
+                <!--<TextView-->
+                <!--android:id="@+id/account_header"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:textStyle="bold"-->
+                <!--android:text="ACCOUNT"-->
+                <!--android:textSize="30dp"-->
+                <!--android:textColor="#ffff"/>-->
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="82">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/activity_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary">
+
+                    <ImageView
+                        android:id="@+id/ivProfile"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/profile_pic" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivProfile"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="John Doe"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvName"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="JDK180092@utdallas.edu"
+                        android:textColor="#FFFFFF" />
+
+                    <!-- A CardView that contains a TextView -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="180dp"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/card_view"
+                            android:layout_width="0dp"
+                            android:layout_height="131dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_weight="100"
+                            card_view:cardBackgroundColor="#FFFFFF"
+                            card_view:cardUseCompatPadding="true"
+                            card_view:cardCornerRadius="30dp">
+
+                            <TextView
+                                android:id="@+id/info_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="10dp"
+                                android:text="Past Purchases"
+                                android:textColor="@color/colorPrimary"
+                                android:textStyle="bold" />
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                    <!-- A CardView that contains a TextView -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="310dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/card_view"
+                            android:layout_width="0dp"
+                            android:layout_height="131dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_weight="100"
+                            card_view:cardBackgroundColor="#FFFFFF"
+                            card_view:cardUseCompatPadding="true"
+                            card_view:cardCornerRadius="30dp">
+
+                            <TextView
+                                android:id="@+id/info_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="10dp"
+                                android:text="Past Sales"
+                                android:textColor="@color/colorPrimary"
+                                android:textStyle="bold" />
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                    <!--<android.support.design.widget.NavigationView-->
+                    <!--android:id="@+id/nav_view"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_gravity="start"-->
+                    <!--android:fitsSystemWindows="true"-->
+                    <!--app:headerLayout="@layout/nav_header_main"-->
+                    <!--app:menu="@menu/activity_main_drawer" />-->
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <android.support.design.widget.BottomNavigationView
+                android:id="@+id/bottom_nav"
+                android:layout_weight="8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/colorPrimaryDark"
+                app:menu="@menu/nav_bar"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="#FFFFFF"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_gravity="center" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </FrameLayout>
+
+    <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_view"
+        app:headerLayout="@layout/nav_header"/>
+
+</android.support.v4.widget.DrawerLayout>
+
+    <!--I change stuff in this file, strings.xml, android manifest, account.java, and add ic_menu & the door in drawable-->
+
