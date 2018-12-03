@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "95562318200",
+    "firebase_url": "https://hitmeup-f7110.firebaseio.com",
+    "project_id": "hitmeup-f7110",
+    "storage_bucket": "hitmeup-f7110.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95562318200:android:c0db69607cf01926",
+        "android_client_info": {
+          "package_name": "com.something.ihfaz.hmu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95562318200-63hp2v5qrel4osnnhl4rci05aea3jv7q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.something.ihfaz.hmu",
+            "certificate_hash": "f4bc1f1068412ac43fb7152e3caeb65fcfd6356b"
+          }
+        },
+        {
+          "client_id": "95562318200-r2ugb4jo3jvb3pqchj8oiiolkqii76i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSC5-tiT6Ln_8oS9JFp1cn9soLzr_NFPk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95562318200-r2ugb4jo3jvb3pqchj8oiiolkqii76i6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
