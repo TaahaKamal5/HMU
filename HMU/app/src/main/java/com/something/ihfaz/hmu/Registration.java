@@ -69,8 +69,13 @@ public class Registration extends AppCompatActivity {
                     String emailHolder = email.getText().toString();
                     String passHolder = pass.getText().toString();
 
-                    mAuth.createUserWithEmailAndPassword(emailHolder, passHolder);
-                    toLogin();
+                    if(emailHolder.substring(emailHolder.length() - 13).equals("utdallas.edu") || emailHolder.substring(emailHolder.length() - 13).equals("utesting.edu"))
+                    {
+                        mAuth.createUserWithEmailAndPassword(emailHolder, passHolder);
+                        toLogin();
+                    }else{
+                        Toast.makeText(Registration.this, "Error: must be a UTDallas email", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
