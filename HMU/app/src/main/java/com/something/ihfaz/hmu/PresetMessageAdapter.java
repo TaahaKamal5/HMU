@@ -15,11 +15,15 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.sql.Timestamp;
+
 
 public class PresetMessageAdapter extends RecyclerView.Adapter<PresetMessageAdapter.MyViewHolder> {
 
+    final long YEARS49INSECONDS = 1545000000000L;
 
     public static int itemsC;
     FirebaseAuth user = FirebaseAuth.getInstance();
@@ -43,6 +47,11 @@ public class PresetMessageAdapter extends RecyclerView.Adapter<PresetMessageAdap
         return new MyViewHolder(v);
     }
 
+    //A method that takes a MyViewHolder and an int as arguments.
+    //  Initially the method checks if the user chose an option to send a point in time.
+    //This is done with the first if and the else if. Assuming both of these are false the method then creates a hashmap to store
+    //the message's data in. It writes the message value and sender to the hashmap then creates a new document representing the message
+    //in the message collection of the item that is being messaged about. Lastly it returns the user to the regular chat screen.
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int i) {
         final int msgType = i;
@@ -73,6 +82,7 @@ public class PresetMessageAdapter extends RecyclerView.Adapter<PresetMessageAdap
                     Map<String, Object> message = new HashMap<>();
                     message.put("message", msgType + "");
                     message.put("sender", user.getUid());
+                    message.put("timestamp", getMessageTimestamp());
                     db.collection("items").document(itemId).collection("messages").document(itemId + "" + itemsC + "" +user.getUid() + Math.random() * 49 + 1).set(message);
                     Toast.makeText(v.getContext(), "Message selected", Toast.LENGTH_SHORT).show();
 
@@ -81,6 +91,20 @@ public class PresetMessageAdapter extends RecyclerView.Adapter<PresetMessageAdap
             });
         }
     }
+
+    public int getMessageTimestamp(){
+        int secondsSince2019 = 0;
+        Timestamp timeSince2019 = new Timestamp(System.currentTimeMillis());
+
+        timeSince2019.setTime(timeSince2019.getTime());
+        Log.d("Timestamp Test:","Timestamp initially set to " + timeSince2019.getTime());
+        timeSince2019.setTime(timeSince2019.getTime()/1000);  //Converting to seconds
+
+        timeSince2019.setTime(timeSince2019.getTime() - YEARS49INSECONDS);  //Now it is seconds since 2019
+
+        return (int)timeSince2019.getTime();
+    }
+
 
     @Override
     public int getItemCount() {
@@ -93,8 +117,8 @@ public class PresetMessageAdapter extends RecyclerView.Adapter<PresetMessageAdap
 
         public MyViewHolder(View view) {
             super(view);
-            presetMsg = (TextView) view.findViewById(R.id.msgTemplate);
-            cView = (CardView) view.findViewById(R.id.cvMsg);
+            presetMsg = view.findViewById(R.id.msgTemplate);
+            cView = view.findViewById(R.id.cvMsg);
         }
     }
 
