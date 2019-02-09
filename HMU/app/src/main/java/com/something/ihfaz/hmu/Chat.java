@@ -33,6 +33,7 @@ import java.util.Map;
 
 public class Chat extends AppCompatActivity {
 
+    //Preset Messages
     final static String[] msgList = {"Yes", "No", "Time for meet up: ", "Day for meet up: ", "I want this back at: ", "I'm at the location", "I'm on my way",
             "That sounds good", "Okay", "Can we negotiate the price", "Where are you?", "I'm interested in this item", "Is this item still available"
     };
